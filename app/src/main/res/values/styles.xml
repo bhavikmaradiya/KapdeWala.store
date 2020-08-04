@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="Fullscreen" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+
+
+    <style name="MyEditTextTheme">
+        <item name="colorControlNormal">#000</item>
+        <item name="colorControlActivated">#000</item>
+        <item name="colorControlHighlight">#000</item>
+    </style>
+    <style name="ThemeOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="fontFamily">@font/oswaldregular</item>
+
+
+    </style>
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="android:textColorSecondary">#000000</item>
+    </style>
+    <style name="NavigationView" >
+        <item name="fontFamily">@font/oswaldmedium</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "529324777359",
+    "firebase_url": "https://kapdaapp.firebaseio.com",
+    "project_id": "kapdaapp",
+    "storage_bucket": "kapdaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529324777359:android:04cf1811ab0bc0216df5fa",
+        "android_client_info": {
+          "package_name": "com.collabcreation.kapda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529324777359-b74kk79kbv0lrspjo00bml3ilm7n4ugb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.collabcreation.kapda",
+            "certificate_hash": "27f5c2e2e10af87a7c142215cf56b9c52385033e"
+          }
+        },
+        {
+          "client_id": "529324777359-smfpfcgkg35ldvcan20n6mkp48qfebkq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHu0VRVZfW_Mq-pulS0SCFbrQKOv8zcCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529324777359-smfpfcgkg35ldvcan20n6mkp48qfebkq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

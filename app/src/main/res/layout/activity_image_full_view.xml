@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.ImageFullViewActivity">
+
+
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/productImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxHeight="350dp"
+        android:minHeight="350dp"
+        android:layout_above="@id/previewImagesList"
+        tools:src="@drawable/ic_shirt" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/previewImagesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="5"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_preview_image"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        app:popupTheme="@style/ThemeOverlay"
+        app:title=""
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:titleTextColor="#000" />
+
+</RelativeLayout>

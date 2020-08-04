@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.WishListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:title="Wishlist" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wishListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        tools:listitem="@layout/item_wishlist" />
+
+    <LinearLayout
+        android:id="@+id/emptylist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_wishlist"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your wishlist is empty"
+            android:textSize="18sp"
+            android:textColor="#DF838383"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/oswaldregular"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Make wish >"
+            android:textSize="15sp"
+            android:textColor="#2EABD3"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/oswaldbold"/>
+
+    </LinearLayout>
+
+</LinearLayout>

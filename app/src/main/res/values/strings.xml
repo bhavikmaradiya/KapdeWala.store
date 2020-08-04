@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KapdeWala.store</string>
+    <!--    <string name="app_name">Weirdo.in</string>-->
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="browse_categories">Browse Categories</string>
+    <string name="view_all">View All</string>
+    <string name="browse_t_shirts">Browse T-shirts</string>
+
+
+</resources>

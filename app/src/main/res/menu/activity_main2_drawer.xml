@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/browseTs"
+            android:title="Browse T's" />
+
+        <item
+            android:id="@+id/browseCategory"
+            android:title="Browse Category" />
+    </group>
+
+
+    <item android:title="PROFILE">
+
+        <menu>
+
+            <item
+                android:id="@+id/myAccount"
+                android:title="My Account" />
+
+            <item
+                android:id="@+id/myOrders"
+                android:title="My Orders" />
+            <item
+                android:id="@+id/myCart"
+                android:title="My Cart" />
+            <item
+                android:id="@+id/myWishlist"
+                android:title="My Wishlist" />
+
+        </menu>
+
+    </item>
+
+    <item android:title="CONTACT US">
+
+        <menu>
+
+            <item
+                android:id="@+id/help"
+                android:title="Help" />
+
+
+            <item
+                android:id="@+id/feedbackSuggestion"
+                android:title="Feedback/Suggestions" />
+
+
+        </menu>
+
+    </item>
+
+    <item android:title="ABOUT US">
+
+        <menu>
+
+            <item
+                android:id="@+id/policy"
+                android:title="Privacy Policy" />
+            <item
+                android:id="@+id/rate"
+                android:title="Rate this app" />
+
+        </menu>
+
+    </item>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/logout"
+            android:title="Logout" />
+    </group>
+
+</menu>

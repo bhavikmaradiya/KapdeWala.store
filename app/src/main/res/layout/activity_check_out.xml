@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.CheckOutActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:title="Checkout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/priceView"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#ffffff"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswaldregular"
+                        android:paddingLeft="7dp"
+                        android:text="Address"
+                        android:textColor="#868686"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="7dp"
+                        android:paddingTop="2dp"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1.5"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/oswaldmedium"
+                            android:maxLines="1"
+                            android:text="Bhavik Maradiya"
+                            android:textColor="#313131"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2.5"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/oswaldregular"
+                            android:gravity="end"
+                            android:inputType="phone"
+                            android:maxLength="14"
+                            android:maxLines="1"
+                            android:paddingRight="7dp"
+                            android:textColor="#313131"
+                            android:textSize="15sp"
+                            tools:text="+91 9428798440" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/oswaldregular"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingBottom="7dp"
+                        android:text="Parsdfcnkdhfkndc jdbzdvddjscfsfhndsfhdnvfndjfvfndvj,\nkjdndl]\cdjjkdn\jdkndkndjdndjndjn\hbcbddfdfchdkfnd kfdjfhndkfhfdkfh\nParsdfcnkdhfkndc dfdfchdkfnd kfdjfhndkfhfdkfh\nParsdfcnkdhfkndc dfdfchdkfnd kfdjfhndkfhfdkfkjvdfjkdvkkfmdvjfjfjfjvfmmfvjffjffmjffvmvjfjfh"
+                        android:textColor="#4B4B4B"
+                        android:textSize="14.5sp" />
+
+
+                    <Button
+                        android:id="@+id/changeAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="7dp"
+                        android:background="@drawable/buybtnbg"
+                        android:fontFamily="@font/oswaldmedium"
+                        android:text="Change Address"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswaldregular"
+                    android:paddingLeft="7dp"
+                    android:text="Items"
+                    android:textColor="#868686"
+                    android:textSize="18sp" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/itemListRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="1"
+                    android:background="#ffffff"
+                    tools:listitem="@layout/item_cart"
+                    android:layout_marginBottom="15dp"/>
+
+
+            </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardElevation="3dp"
+                android:layout_marginBottom="40dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswaldregular"
+                    android:paddingLeft="7dp"
+                    android:text="Order Summary"
+                    android:textColor="#868686"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/oswaldmedium"
+                            android:padding="5dp"
+                            android:text="Total MRP (Incl. tax)"
+                            android:textColor="#444444"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/totalPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/oswaldmedium"
+                            android:padding="5dp"
+                            android:textColor="#303030"
+                            android:textSize="15sp"
+                            tools:text="$ 5000" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/oswaldmedium"
+                            android:padding="5dp"
+                            android:text="Shipping Charges"
+                            android:textColor="#444444"
+                            android:textSize="15sp" />
+
+
+                        <TextView
+                            android:id="@+id/shippingCharge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/oswaldmedium"
+                            android:padding="5dp"
+                            android:text="$ 20"
+                            android:textColor="#303030"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/discountCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/oswaldmedium"
+                            android:padding="5dp"
+                            android:text="Discount"
+                            android:textColor="#444444"
+                            android:textSize="15sp" />
+
+
+                        <TextView
+                            android:id="@+id/discountAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/oswaldmedium"
+                            android:padding="5dp"
+                            android:text="-$ 10"
+                            android:textColor="#2E9B00"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/promoCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/oswaldmedium"
+                            android:padding="5dp"
+                            android:text="Promocode Discount"
+                            android:textColor="#444444"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/promoCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/oswaldmedium"
+                            android:padding="5dp"
+                            android:textColor="#2E9B00"
+                            android:textSize="15sp"
+                            tools:text="Have Promocode ?" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/priceView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F1F1F1"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3.5"
+            android:orientation="vertical"
+            android:paddingLeft="7dp"
+            android:paddingBottom="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswaldmedium"
+                android:text="Total Price"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/payableAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswaldregular"
+                android:text="Total Price"
+                android:textColor="#5F5F5F"
+                android:textSize="15sp"
+                tools:text="$ 5000" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="0dp"
+            android:layout_weight="3"
+            android:background="@drawable/cartbtnbg"
+            android:padding="3dp"
+            android:text="Place Order"
+            android:textColor="#2EABD3" />
+
+    </LinearLayout>
+
+</RelativeLayout>

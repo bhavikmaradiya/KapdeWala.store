@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="135dp"
+                android:layout_height="145dp"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:maxHeight="160dp"
+                android:padding="5dp"
+                tools:src="@drawable/ic_shirt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="1.5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/oswaldregular"
+                    android:maxLines="1"
+                    android:textColor="#5E5E5E"
+                    android:textSize="17sp"
+                    tools:text="Product Name" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/productPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswaldregular"
+                        android:layout_gravity="center_vertical"
+                        android:maxLines="1"
+                        android:textColor="#272727"
+                        android:textSize="17sp"
+                        tools:text="$50.00" />
+
+                    <TextView
+                        android:id="@+id/productOriginalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/oswaldregular"
+                        android:maxLines="1"
+                        android:textColor="#6D6D6D"
+                        android:textSize="15sp"
+                        tools:text="$50.00" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/offerBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/offerbadge2"
+                    android:fontFamily="@font/oswaldregular"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    tools:text="50%" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
