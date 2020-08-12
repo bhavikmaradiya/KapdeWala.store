@@ -42,7 +42,7 @@ public class AddressListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_address_list);
         initView();
-        addNewAddressbtn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), UpdateAddressActivity.class).putExtra("isEdit", false).putExtra("total", addressList.size())));
+        addNewAddressbtn.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), UpdateAddressActivity.class).putExtra("isEdit", false).putExtra("total", addressList.size())));
 
     }
 

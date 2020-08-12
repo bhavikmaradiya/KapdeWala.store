@@ -245,9 +245,7 @@ public class MainActivity extends AppCompatActivity implements CategoryAdapter.O
     @Override
     public void onCategorySelected(Category category) {
         SubCategory subCategory = category.getSubCategoryList().get(0);
-
         Toast.makeText(this, subCategory.getCategoryName(), Toast.LENGTH_SHORT).show();
-
     }
 
     @Override
